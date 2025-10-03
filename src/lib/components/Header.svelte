@@ -4,7 +4,7 @@
 	let showMenu = $state(false);
 </script>
 
-<header class="border-b border-slate-300">
+<header class="relative z-10 border-b border-slate-300 bg-white">
 	<div class="flex w-full items-center justify-between p-4">
 		<a class="font-brand text-2xl font-light" href="/">
 			<span class="text-primary">KANG</span>
@@ -36,19 +36,23 @@
 	</div>
 </header>
 
-<nav class={`${showMenu ? '' : 'hidden'} sm:hidden`}>
-	<ul class="text-white flex w-full flex-col items-stretch bg-primary px-2 py-4">
+<nav
+	class={`${
+		showMenu ? 'translate-y-16' : '-translate-y-full'
+	} absolute top-0 left-0 w-full transition-transform duration-300 ease-in-out sm:hidden`}
+>
+	<ul class="flex w-full flex-col items-stretch bg-primary px-2 py-4 text-white">
 		<li class="rounded-2xl font-semibold hover:bg-white hover:text-primary">
-			<a href="/" class="p-4 w-full block">Beranda</a>
+			<a href="/" class="block w-full p-4">Beranda</a>
 		</li>
 		<li class="rounded-2xl font-semibold hover:bg-white hover:text-primary">
-			<a href="/" class="p-4 w-full block">Tentang Kami</a>
+			<a href="/" class="block w-full p-4">Tentang Kami</a>
 		</li>
 		<li class="rounded-2xl font-semibold hover:bg-white hover:text-primary">
-			<a href="/" class="p-4 w-full block">Blog</a>
+			<a href="/" class="block w-full p-4">Blog</a>
 		</li>
 		<li class="rounded-2xl font-semibold hover:bg-white hover:text-primary">
-			<a href="/" class="p-4 w-full block">Kontak</a>
+			<a href="/" class="block w-full p-4">Kontak</a>
 		</li>
 	</ul>
 </nav>
