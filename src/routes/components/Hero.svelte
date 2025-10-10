@@ -34,7 +34,7 @@
 				<img
 					src={decorSrc}
 					alt="Keranjang buah segar"
-					class="mx-auto w-full max-w-md min-w-sm drop-shadow-md"
+					class="mx-auto w-full max-w-md drop-shadow-md"
 					loading="eager"
 				/>
 			</picture>
