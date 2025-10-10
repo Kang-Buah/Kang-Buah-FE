@@ -5,14 +5,22 @@
 @custom-variant hover (&:hover);
 
 @theme {
-  --color-primary: #298724;
-  --color-secondary: #EB3124;
-  --font-brand: "Anton", sans-serif;
-  --font-display: "Poppins", sans-serif;
+	--color-primary: #298724;
+	--color-secondary: #eb3124;
+	--font-brand: 'Anton', sans-serif;
+	--font-display: 'Poppins', sans-serif;
 }
 
 @layer base {
-  body {
-    font-family: var(--font-display);
-  }
+	body {
+		font-family: var(--font-display);
+	}
+	h1:hover,
+	h2:hover,
+	h3:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--color-secondary);
+		text-underline-offset: 3px;
+		text-decoration-thickness: 2px;
+	}
 }
