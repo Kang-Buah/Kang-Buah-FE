@@ -59,7 +59,7 @@
 			</p>
 		</header>
 
-		<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 sm:gap-6 lg:grid-cols-4">
 			{#each products as p}
 				<article
 					class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
