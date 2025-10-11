@@ -1,23 +1,31 @@
 <script>
 	import { Menu } from '@lucide/svelte';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 
 	let showMenu = false;
 	let currentPath = '/';
 
 	const navLinks = [
 		{ name: 'Beranda', href: '/' },
-		{ name: 'Tentang Kami', href: '/#tentang-kami' },
-		{ name: 'Blog', href: '/#blog' },
-		{ name: 'Kontak', href: '/#kontak' }
+		{ name: 'Tentang Kami', href: '/tentang-kami' },
+		{ name: 'Blog', href: '/blog' },
+		{ name: 'Kontak', href: '/kontak' }
 	];
 
-	onMount(() => {
-		currentPath = window.location.pathname;
-	});
+	// Reactive statement to update current path when page changes
+	$: currentPath = $page.url.pathname;
+
+	function isActiveLink(href) {
+		return currentPath === href;
+	}
+
+	function handleNavigation(href) {
+		window.location.href = href;
+	}
 </script>
 
-<header class="relative z-10 border-b border-slate-300 bg-white">
+<header id="top" class="relative z-10 border-b border-slate-300 bg-white">
 	<div class="flex w-full items-center justify-between p-4">
 		<a class="font-brand text-2xl font-light" href="/">
 			<span class="text-primary">KANG</span>
@@ -32,10 +40,17 @@
 		<nav class="hidden sm:block">
 			<ul class="flex gap-4 text-black">
 				{#each navLinks as link}
-					<li
-						class={`hover:text-primary hover:underline hover:decoration-secondary ${currentPath === link.href ? 'font-bold text-primary underline decoration-secondary' : 'font-medium'}`}
-					>
-						<a href={link.href}>{link.name}</a>
+					<li>
+						<button
+							on:click={() => handleNavigation(link.href)}
+							class={`font-medium transition-all duration-200 hover:text-primary hover:underline hover:decoration-secondary hover:decoration-2 hover:underline-offset-4 ${
+								isActiveLink(link.href)
+									? 'font-bold text-primary underline decoration-secondary decoration-2 underline-offset-4'
+									: ''
+							}`}
+						>
+							{link.name}
+						</button>
 					</li>
 				{/each}
 			</ul>
@@ -52,9 +67,13 @@
 	<ul class="flex w-full flex-col items-stretch bg-primary py-4 text-white">
 		{#each navLinks as link}
 			<li
-				class={`hover:bg-white ${currentPath === link.href ? 'bg-white font-bold text-secondary' : 'font-semibold hover:text-primary'} `}
+				class={`transition-all duration-200 hover:bg-white hover:text-primary ${
+					isActiveLink(link.href) ? 'bg-white font-bold text-secondary' : 'font-semibold'
+				}`}
 			>
-				<a href={link.href} class="block w-full p-6">{link.name}</a>
+				<button on:click={() => handleNavigation(link.href)} class="block w-full p-6 text-left">
+					{link.name}
+				</button>
 			</li>
 		{/each}
 	</ul>
