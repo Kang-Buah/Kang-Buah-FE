@@ -1,5 +1,5 @@
 <script>
-	import { ArrowUp } from '@lucide/svelte';
+	import { ArrowUp, MapPin, Phone, Instagram } from '@lucide/svelte';
 </script>
 
 <footer class="py-12">
@@ -7,7 +7,7 @@
 		<div class="mb-8 flex justify-center">
 			<div>
 				<a
-					href="/"
+					href="#top"
 					class="relative flex h-12 w-12 animate-bounce items-center justify-center rounded-full border-4 border-primary bg-secondary transition hover:scale-115"
 				>
 					<span class="text-xl font-bold text-white">
@@ -44,11 +44,17 @@
 				<h2 class="mb-4 text-xl font-bold">Bantuan</h2>
 				<div class="flex">
 					<ul class="mr-8">
-						<li><a href="/" class="inline-block py-2 hover:text-primary">Informasi Pengiriman</a></li>
 						<li>
-							<a href="/" class="inline-block py-2 hover:text-primary">Pengembalian &amp; Penukaran</a>
+							<a href="/" class="inline-block py-2 hover:text-primary">Informasi Pengiriman</a>
 						</li>
-						<li><a href="/" class="inline-block py-2 hover:text-primary">Syarat &amp; Ketentuan</a></li>
+						<li>
+							<a href="/" class="inline-block py-2 hover:text-primary"
+								>Pengembalian &amp; Penukaran</a
+							>
+						</li>
+						<li>
+							<a href="/" class="inline-block py-2 hover:text-primary">Syarat &amp; Ketentuan</a>
+						</li>
 						<li><a href="/" class="inline-block py-2 hover:text-primary">Kebijakan Privasi</a></li>
 					</ul>
 					<ul>
@@ -57,23 +63,30 @@
 					</ul>
 				</div>
 			</div>
-			<!-- <div>
+			<div class="max-w-xs">
 				<h2 class="mb-4 text-xl font-bold">Punya Pertanyaan?</h2>
 				<ul>
 					<li class="mb-3 flex items-start">
-						<span class="material-icons mr-2">Alamat:</span>
-						<span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+						<MapPin class="mt-1 mr-2 h-4 w-4 flex-shrink-0" />
+						<address class="text-sm"
+							><a class="hover:text-primary" target="_blank" href="https://maps.app.goo.gl/aWx4LiB7YM5bnsgX6">
+								Jl. Gudang Air No. 2, RT 003 RW 002, Rambutan, Kec. Ciracas, Kota Jakarta Timur,
+								Daerah Khusus Ibukota Jakarta 13830
+							</a>
+						</address>
 					</li>
 					<li class="mb-3 flex items-center">
-						<span class="material-icons mr-2">phone</span>
-						<a href="/" class="hover:text-white">+2 392 3929 210</a>
+						<Phone class="mr-2 h-4 w-4 flex-shrink-0" />
+						<a href="https://wa.me/628811490430" target="_blank" class="text-sm hover:text-primary">+628811490430</a>
 					</li>
 					<li class="flex items-center">
-						<span class="material-icons mr-2">email</span>
-						<a href="/" class="hover:text-white">info@yourdomain.com</a>
+						<Instagram class="mr-2 h-4 w-4 flex-shrink-0" />
+						<a href="https://instagram.com/kangbuahsegar" target="_blank" class="text-sm hover:text-primary"
+							>@kangbuahsegar</a
+						>
 					</li>
 				</ul>
-			</div> -->
+			</div>
 		</section>
 		<div class="text-center text-sm text-gray-700">
 			<p>
