@@ -5,8 +5,8 @@
 	const decorImages = [
 		'Nge-grape-in_Your_Day.png',
 		'Peel_the_Joy.png',
-		'Slice_it_Love_it[1].JPG',
-		'Slice_it_Love_it[2].JPG'
+		'Slice_it_Love_it[1].jpg',
+		'Slice_it_Love_it[2].jpg'
 	];
 
 	const dealTypes = [
@@ -31,7 +31,7 @@
 	}
 
 	function mapTitle(filename) {
-		if (filename === 'Slice_it_Love_it[1].JPG' || filename === 'Slice_it_Love_it[2].JPG') {
+		if (filename === 'Slice_it_Love_it[1].jpg' || filename === 'Slice_it_Love_it[2].jpg') {
 			return 'Slice it, Love it!';
 		}
 		if (filename === 'Peel_the_Joy.png') {

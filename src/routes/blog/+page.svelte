@@ -23,7 +23,7 @@
 	<!-- Background Banner Image -->
 	<div class="absolute inset-0 -z-10">
 		<img
-			src="/assets/images/decor/blog/Parcel-Buah-Banner.JPG"
+			src="/assets/images/decor/blog/Parcel-Buah-Banner.jpg"
 			alt="Parcel Buah Banner"
 			class="h-full w-full object-cover brightness-50"
 			loading="eager"

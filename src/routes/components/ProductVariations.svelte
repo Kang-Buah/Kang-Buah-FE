@@ -3,17 +3,17 @@
 		{
 			name: 'Buah Kiloan',
 			desc: 'Pilihan buah segar dalam satuan kilo, cocok untuk kebutuhan harian.',
-			img: '/assets/images/product-variations/Buah-Kiloan.JPG'
+			img: '/assets/images/product-variations/Buah-Kiloan.jpg'
 		},
 		{
 			name: 'Buah Potong',
 			desc: 'Siap santap, higienis, dan praktis untuk dinikmati kapan saja.',
-			img: '/assets/images/product-variations/Buah-Potong.JPG'
+			img: '/assets/images/product-variations/Buah-Potong.jpg'
 		},
 		{
 			name: 'Parcel Buah',
 			desc: 'Pilihan hadiah sehat dan elegan untuk momen spesial.',
-			img: '/assets/images/product-variations/Parcel-Buah.JPG'
+			img: '/assets/images/product-variations/Parcel-Buah.jpg'
 		}
 	];
 

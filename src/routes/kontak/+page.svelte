@@ -32,7 +32,7 @@
                 type="image/webp"
             />
             <img
-                src="/assets/images/decor/contact/Apple-Slices-Banner.JPG"
+                src="/assets/images/decor/contact/Apple-Slices-Banner.jpg"
                 alt="Apple Slices Banner"
                 class="h-full w-full object-cover brightness-50"
                 loading="eager"
