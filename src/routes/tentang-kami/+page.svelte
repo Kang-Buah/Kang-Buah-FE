@@ -35,7 +35,7 @@
 				type="image/webp"
 			/>
 			<img
-				src="/assets/images/decor/about-us/Kang-Buah-Products-Banner.JPG"
+				src="/assets/images/decor/about-us/Kang-Buah-Products-Banner.jpg"
 				alt="Kang Buah Products Banner"
 				class="h-full w-full object-cover brightness-50"
 				loading="eager"
@@ -57,7 +57,7 @@
 							type="image/webp"
 						/>
 						<img
-							src="/assets/images/decor/about-us/A-Plate-of-Fruits.JPG"
+							src="/assets/images/decor/about-us/A-Plate-of-Fruits.jpg"
 							alt="Piring buah segar"
 							class="h-full w-full object-cover"
 							loading="lazy"

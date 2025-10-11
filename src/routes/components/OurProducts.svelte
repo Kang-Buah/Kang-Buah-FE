@@ -2,31 +2,31 @@
 	const products = [
 		{
 			name: 'Apel',
-			image: '/assets/images/products/fruits/Apel.JPG',
+			image: '/assets/images/products/fruits/Apel.jpg',
 			price: 28000,
 			discountPercent: 10
 		},
-		{ name: 'Pisang', image: '/assets/images/products/fruits/Pisang.JPG', price: 18000 },
+		{ name: 'Pisang', image: '/assets/images/products/fruits/Pisang.jpg', price: 18000 },
 		{
 			name: 'Jeruk',
-			image: '/assets/images/products/fruits/Jeruk.JPG',
+			image: '/assets/images/products/fruits/Jeruk.jpg',
 			price: 22000,
 			discountPercent: 15
 		},
-		{ name: 'Mangga', image: '/assets/images/products/fruits/Mangga.JPG', price: 30000 },
-		{ name: 'Buah Naga', image: '/assets/images/products/fruits/Buah-Naga.JPG', price: 35000 },
+		{ name: 'Mangga', image: '/assets/images/products/fruits/Mangga.jpg', price: 30000 },
+		{ name: 'Buah Naga', image: '/assets/images/products/fruits/Buah-Naga.jpg', price: 35000 },
 		{
 			name: 'Anggur',
-			image: '/assets/images/products/fruits/Anggur.JPG',
+			image: '/assets/images/products/fruits/Anggur.jpg',
 			price: 45000,
 			discountPercent: 5
 		},
 		{
 			name: 'Anggur Hijau',
-			image: '/assets/images/products/fruits/Anggur-Hijau.JPG',
+			image: '/assets/images/products/fruits/Anggur-Hijau.jpg',
 			price: 46000
 		},
-		{ name: 'Pir', image: '/assets/images/products/fruits/Pir.JPG', price: 27000 }
+		{ name: 'Pir', image: '/assets/images/products/fruits/Pir.jpg', price: 27000 }
 	];
 
 	function formatIDR(amount) {
