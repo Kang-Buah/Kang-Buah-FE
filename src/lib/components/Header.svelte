@@ -1,10 +1,9 @@
 <script>
 	import { Menu } from '@lucide/svelte';
-	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 
 	let showMenu = false;
-	let currentPath = '/';
 
 	const navLinks = [
 		{ name: 'Beranda', href: '/' },
@@ -13,15 +12,15 @@
 		{ name: 'Kontak', href: '/kontak' }
 	];
 
-	// Reactive statement to update current path when page changes
-	$: currentPath = $page.url.pathname;
-
+	// fungsi cek aktif
 	function isActiveLink(href) {
-		return currentPath === href;
+		return $page.url.pathname === href;
 	}
 
-	function handleNavigation(href) {
-		window.location.href = href;
+	// navigasi reaktif tanpa reload penuh
+	async function handleNavigation(href) {
+		showMenu = false;
+		await goto(href);
 	}
 </script>
 
@@ -31,12 +30,15 @@
 			<span class="text-primary">KANG</span>
 			<span class="text-secondary">BUAH</span>
 		</a>
+
 		<button
 			class={`rounded-lg p-2 text-black transition-all duration-300 focus:outline-none sm:hidden ${showMenu ? 'bg-slate-200' : ''}`}
 			on:click={() => (showMenu = !showMenu)}
 		>
 			<Menu size="24" />
 		</button>
+
+		<!-- menu desktop -->
 		<nav class="hidden sm:block">
 			<ul class="flex gap-4 text-black">
 				{#each navLinks as link}
@@ -55,10 +57,10 @@
 				{/each}
 			</ul>
 		</nav>
-		<div class="hidden sm:block"></div>
 	</div>
 </header>
 
+<!-- menu mobile -->
 <nav
 	class={`${
 		showMenu ? 'translate-y-16' : '-translate-y-full'
