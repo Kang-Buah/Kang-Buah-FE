@@ -1,6 +1,9 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	const decorSrc = '/assets/images/decor/A-Basket-of-Fruit.png';
 	const decorSrcWebp = '/assets/images/decor/A-Basket-of-Fruit.webp';
+
 </script>
 
 <section class="relative isolate overflow-hidden bg-white">
@@ -17,12 +20,12 @@
 			</p>
 			<div class="flex flex-wrap gap-3">
 				<a
-					href="#toko"
+					href="#shop"
 					class="rounded-md bg-primary px-5 py-3 font-medium text-white hover:bg-primary/90"
 					>Belanja Sekarang</a
 				>
 				<a
-					href="#tentang-kami"
+					href="#produk"
 					class="rounded-md border border-slate-300 px-5 py-3 font-medium text-slate-800 hover:border-primary hover:text-primary"
 					>Eksplor Produk</a
 				>

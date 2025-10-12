@@ -16,7 +16,7 @@
 	<div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24">
 		<div class="text-center">
 			<h1 class="mb-6 font-brand text-4xl font-light text-white sm:text-5xl lg:text-6xl">
-				<span class="text-primary">Kontak</span> Kami
+				Kontak Kami
 			</h1>
 			<p class="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl">
 				Hubungi kami untuk informasi produk, pemesanan, atau pertanyaan lainnya
@@ -34,7 +34,7 @@
             <img
                 src="/assets/images/decor/contact/Apple-Slices-Banner.jpg"
                 alt="Apple Slices Banner"
-                class="h-full w-full object-cover brightness-50"
+				class="h-full w-full object-cover brightness-[40%]"
                 loading="eager"
             />
         </picture>

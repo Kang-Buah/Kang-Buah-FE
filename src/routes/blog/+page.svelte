@@ -1,3 +1,7 @@
+<script>
+	import { goto } from '$app/navigation';
+</script>
+
 <svelte:head>
 	<title>Blog | Kang Buah</title>
 	<meta
@@ -22,12 +26,15 @@
 
 	<!-- Background Banner Image -->
 	<div class="absolute inset-0 -z-10">
-		<img
-			src="/assets/images/decor/blog/Parcel-Buah-Banner.jpg"
-			alt="Parcel Buah Banner"
-			class="h-full w-full object-cover brightness-50"
-			loading="eager"
-		/>
+		<picture>
+			<source srcset="/assets/images/decor/blog/Parcel-Buah-Banner.webp" type="image/webp" />
+			<img
+				src="/assets/images/decor/blog/Parcel-Buah-Banner.webp"
+				alt="Parcel Buah Banner"
+				class="h-full w-full object-cover brightness-[35%]"
+				loading="eager"
+			/>
+		</picture>
 	</div>
 </section>
 
@@ -38,22 +45,21 @@
 			<span class="text-primary">Segera</span> Hadir
 		</h2>
 		<p class="mb-8 text-lg text-slate-600">
-			Kami sedang mempersiapkan konten menarik untuk Anda. Pantau terus untuk mendapatkan tips
-			terbaru seputar buah-buahan dan gaya hidup sehat!
+			Pantau terus untuk tips terbaru tentang buah dan hidup sehat.
 		</p>
 		<div class="flex flex-wrap justify-center gap-4">
-			<a
-				href="/"
-				class="rounded-md bg-primary px-6 py-3 font-medium text-white hover:bg-primary/90"
+			<button
+				onclick={() => goto('/', { invalidateAll: true })}
+				class="w-full rounded-md bg-primary px-6 py-3 font-medium text-white hover:bg-primary/90 sm:w-fit"
 			>
 				Kembali ke Beranda
-			</a>
-			<a
-				href="/kontak"
-				class="rounded-md border border-primary px-6 py-3 font-medium text-primary hover:bg-primary hover:text-white"
+			</button>
+			<button
+				onclick={() => goto('/kontak', { invalidateAll: true })}
+				class="w-full rounded-md border border-primary px-6 py-3 font-medium text-primary hover:bg-primary hover:text-white sm:w-fit"
 			>
 				Hubungi Kami
-			</a>
+			</button>
 		</div>
 	</div>
 </section>

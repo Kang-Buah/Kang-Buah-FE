@@ -113,25 +113,25 @@
 					{#if chosenType.key === 'voucher'}
 						<a
 							href="/#voucher"
-							class="rounded-md bg-secondary px-5 py-3 font-medium text-white hover:bg-secondary/90"
+							class="w-full rounded-md bg-secondary px-5 py-3 text-center font-medium text-white hover:bg-secondary/90 sm:w-fit"
 							>Ambil Voucher</a
 						>
 					{:else if chosenType.key === 'flash'}
 						<a
 							href="/#flash-sale"
-							class="rounded-md bg-primary px-5 py-3 font-medium text-white hover:bg-primary/90"
+							class="w-full rounded-md bg-primary px-5 py-3 text-center font-medium text-white hover:bg-primary/90 sm:w-fit"
 							>Belanja Sekarang</a
 						>
 					{:else}
 						<a
 							href="/#promo"
-							class="rounded-md bg-primary px-5 py-3 font-medium text-white hover:bg-primary/90"
+							class="w-full rounded-md bg-primary px-5 py-3 text-center font-medium text-white hover:bg-primary/90 sm:w-fit"
 							>Lihat Promo</a
 						>
 					{/if}
 					<a
 						href="/#syarat-ketentuan"
-						class="rounded-md border border-slate-300 px-5 py-3 font-medium text-slate-800 hover:border-primary hover:text-primary"
+						class="w-full rounded-md border border-slate-300 px-5 py-3 text-center font-medium text-slate-800 hover:border-primary hover:text-primary sm:w-fit"
 						>S&K Berlaku</a
 					>
 				</div>

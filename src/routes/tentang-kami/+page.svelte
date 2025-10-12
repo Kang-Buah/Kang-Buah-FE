@@ -1,5 +1,6 @@
 <script>
 	import { Heart, Users, Clock, Award } from '@lucide/svelte';
+	import { goto } from '$app/navigation';
 </script>
 
 <svelte:head>
@@ -16,9 +17,9 @@
 	<div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24">
 		<div class="text-center">
 			<h1 class="mb-6 font-brand text-4xl font-light text-white sm:text-5xl lg:text-6xl">
-				<span class="text-primary">Tentang</span> Kami
+				Tentang Kami
 			</h1>
-			<p class="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl">
+			<p class="mx-auto max-w-2xl text-md sm:text-lg text-white/90 md:text-xl">
 				Mengenal lebih dekat cerita di balik <a
 					class="font-bold hover:text-primary hover:underline hover:decoration-secondary"
 					href="/">Kang Buah</a
@@ -37,7 +38,7 @@
 			<img
 				src="/assets/images/decor/about-us/Kang-Buah-Products-Banner.jpg"
 				alt="Kang Buah Products Banner"
-				class="h-full w-full object-cover brightness-50"
+				class="h-full w-full object-cover brightness-[35%]"
 				loading="eager"
 			/>
 		</picture>
@@ -165,18 +166,18 @@
 			Mari mulai hidup sehat dengan cara yang praktis dan menyenangkan
 		</p>
 		<div class="flex flex-wrap justify-center gap-4">
-			<a
-				href="/#produk"
-				class="rounded-md bg-primary px-6 py-3 font-medium text-white hover:bg-primary/90"
+			<button
+				onclick={() => goto('/#shop')}
+				class="w-full rounded-md bg-primary px-6 py-3 font-medium text-white hover:bg-primary/90 sm:w-fit"
 			>
 				Lihat Produk Kami
-			</a>
-			<a
-				href="/#kontak"
-				class="rounded-md border border-primary px-6 py-3 font-medium text-primary hover:bg-primary hover:text-white"
+			</button>
+			<button
+				onclick={() => goto('/kontak')}
+				class="w-full rounded-md border border-primary px-6 py-3 font-medium text-primary hover:bg-primary hover:text-white sm:w-fit"
 			>
 				Hubungi Kami
-			</a>
+			</button>
 		</div>
 	</div>
 </section>
