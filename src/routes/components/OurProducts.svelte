@@ -47,7 +47,7 @@
 	}
 </script>
 
-<section class="bg-white py-12 sm:py-16">
+<section id="produk" class="bg-white py-12 sm:py-16">
 	<div class="mx-auto max-w-7xl px-4 sm:px-8">
 		<header class="mb-8 text-center">
 			<h2 class="mb-[0.75em] font-brand text-3xl font-light sm:text-4xl">
