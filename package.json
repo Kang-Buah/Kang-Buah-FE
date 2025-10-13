@@ -31,6 +31,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
-		"@lucide/svelte": "^0.541.0"
+		"@lucide/svelte": "^0.541.0",
+		"svelte-bootstrap-icons": "^3.3.0"
 	}
 }
