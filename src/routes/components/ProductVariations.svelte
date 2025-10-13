@@ -45,7 +45,7 @@
 					</picture>
 					<!-- Always-visible title band -->
 					<div
-						class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent p-4 text-white"
+						class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent p-4 text-white group-hover:opacity-0 transition-opacity duration-300"
 					>
 						<h3 class="text-lg font-semibold">{item.name}</h3>
 					</div>

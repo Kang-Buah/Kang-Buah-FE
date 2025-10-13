@@ -51,7 +51,7 @@
 				<span class="text-white">Blog</span>
 			</h1>
 			<p class="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl">
-				Tips dan informasi seputar buah-buahan segar, kesehatan, dan gaya hidup sehat
+				Tips dan informasi seputar buah-buahan segar, kesehatan, gaya hidup sehat, dan informasi menarik lainnya.
 			</p>
 		</div>
 	</div>
@@ -79,7 +79,7 @@
 					<span class="text-primary">Artikel</span> Terbaru
 				</h2>
 				<p class="text-lg text-slate-600">
-					Temukan tips dan informasi terbaru seputar buah-buahan segar
+					Temukan tips dan informasi terbaru seputar buah-buahan segar atau lainnya di sini!
 				</p>
 			</div>
 

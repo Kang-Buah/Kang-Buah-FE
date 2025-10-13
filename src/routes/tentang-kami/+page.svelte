@@ -167,7 +167,7 @@
 		</p>
 		<div class="flex flex-wrap justify-center gap-4">
 			<button
-				onclick={() => goto('/#shop')}
+				onclick={() => goto('/#produk')}
 				class="w-full rounded-md bg-primary px-6 py-3 font-medium text-white hover:bg-primary/90 sm:w-fit"
 			>
 				Lihat Produk Kami
