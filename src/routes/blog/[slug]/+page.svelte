@@ -33,13 +33,30 @@
 		goto('/blog');
 	}
 
+	function formatAuthorName(fullName) {
+		if (!fullName) return '';
+		const parts = fullName.trim().split(' ');
+		if (parts.length === 1) return parts[0]; // nama tunggal
+		const lastName = parts[parts.length - 1];
+		const initials = parts
+			.slice(0, -1)
+			.map((n) => n[0].toUpperCase() + '. ')
+			.join(' ');
+		return `${initials} ${lastName}`;
+	}
 </script>
 
 <svelte:head>
 	<title>{stripHtml(data?.post?.title?.rendered) || 'Artikel'} | Blog Kang Buah</title>
-	<meta name="description" content={stripHtml(data?.post?.excerpt?.rendered) || 'Artikel menarik dari Kang Buah'} />
+	<meta
+		name="description"
+		content={stripHtml(data?.post?.excerpt?.rendered) || 'Artikel menarik dari Kang Buah'}
+	/>
 	<meta property="og:title" content={stripHtml(data?.post?.title?.rendered) || 'Artikel'} />
-	<meta property="og:description" content={stripHtml(data?.post?.excerpt?.rendered) || 'Artikel menarik dari Kang Buah'} />
+	<meta
+		property="og:description"
+		content={stripHtml(data?.post?.excerpt?.rendered) || 'Artikel menarik dari Kang Buah'}
+	/>
 	{#if data?.post?.featured_media}
 		<meta property="og:image" content={data.post.featured_media} />
 	{/if}
@@ -56,13 +73,20 @@
 				class="mb-6 inline-flex items-center text-white/90 transition-colors duration-200 hover:text-white"
 			>
 				<svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M15 19l-7-7 7-7"
+					/>
 				</svg>
 				Kembali ke Blog
 			</button>
 
 			<h1 class="mb-6 font-brand text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-				<span class="text-white">{@html data?.post?.title?.rendered || 'Artikel Tidak Ditemukan'}</span>
+				<span class="text-white"
+					>{@html data?.post?.title?.rendered || 'Artikel Tidak Ditemukan'}</span
+				>
 			</h1>
 
 			{#if data?.post}
@@ -77,7 +101,14 @@
 					</div>
 					<div class="flex items-center">
 						<UserRoundPen class="mr-2 h-4 w-4" />
-						{data.post._embedded?.author?.[0]?.name || 'Kang Buah'}
+						{#each data.post.authors as author, i (author.user_id)}
+							<span>{formatAuthorName(author.display_name)}</span>
+							{#if i < data.post.authors.length - 2}
+								<span>, </span>
+							{:else if i === data.post.authors.length - 2}
+								<pre> &amp; </pre>
+							{/if}
+						{/each}
 					</div>
 				</div>
 			{/if}
@@ -135,7 +166,12 @@
 				class="inline-flex items-center rounded-md bg-primary px-6 py-3 font-medium text-white transition-colors duration-200 hover:bg-primary/90"
 			>
 				<svg class="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M15 19l-7-7 7-7"
+					/>
 				</svg>
 				Kembali ke Blog
 			</button>
@@ -145,11 +181,11 @@
 
 <!-- Related Articles Section -->
 <section class="bg-slate-50 py-16 sm:py-20">
-	<div class="mx-auto max-w-7xl px-4 sm:px-8 text-center">
+	<div class="mx-auto max-w-7xl px-4 text-center sm:px-8">
 		<h2 class="mb-4 font-brand text-3xl font-light sm:text-4xl">
 			<span class="text-primary">Artikel</span> Lainnya
 		</h2>
-		<p class="text-lg text-slate-600 mb-8">Temukan artikel menarik lainnya dari Kang Buah</p>
+		<p class="mb-8 text-lg text-slate-600">Temukan artikel menarik lainnya dari Kang Buah</p>
 		<button
 			onclick={goBackToBlog}
 			class="inline-flex items-center rounded-md border border-primary px-6 py-3 font-medium text-primary transition-colors duration-200 hover:bg-primary hover:text-white"
