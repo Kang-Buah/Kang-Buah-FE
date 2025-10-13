@@ -1,5 +1,24 @@
 <script>
-	import { ArrowUp, MapPin, Phone, Instagram } from '@lucide/svelte';
+	import { ArrowUp, MapPin, Phone } from '@lucide/svelte';
+	import { Instagram, Facebook, Whatsapp } from 'svelte-bootstrap-icons';
+
+	const socialMediaLinks = [
+		{
+			name: 'WhatsApp',
+			icon: Whatsapp,
+			url: 'https://wa.me/628811490430'
+		},
+		{
+			name: 'Instagram',
+			icon: Instagram,
+			url: 'https://www.instagram.com/kangbuahsegar'
+		},
+		{
+			name: 'Facebook',
+			icon: Facebook,
+			url: 'https://www.facebook.com/kangbuahsegar'
+		}
+	];
 </script>
 
 <footer class="py-12">
@@ -25,11 +44,22 @@
 				<p class="max-w-xs">
 					Hadir untuk Anda dalam mendapatkan buah-buahan segar berkualitas dengan harga terjangkau!
 				</p>
-				<!-- <ul class="mt-4 flex space-x-4">
-					<li><a href="/" class="hover:text-white"><span>Twitter</span></a></li>
-					<li><a href="/" class="hover:text-white"><span>Facebook</span></a></li>
-					<li><a href="/" class="hover:text-white"><span>Instagram</span></a></li>
-				</ul> -->
+				<ul class="mt-4 flex space-x-4">
+					{#each socialMediaLinks as link}
+						<li class="transition-transform duration-300 hover:scale-110">
+							<a
+								href={link.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-gray-600 hover:text-primary"
+								aria-label={link.name}
+								title={`${link.name} Account`}
+							>
+								<link.icon width={20} height={20} />
+							</a>
+						</li>
+					{/each}
+				</ul>
 			</div>
 			<div class="grow">
 				<h2 class="mb-4 text-xl font-bold">Menu</h2>
@@ -68,8 +98,12 @@
 				<ul>
 					<li class="mb-3 flex items-start">
 						<MapPin class="mt-1 mr-2 h-4 w-4 flex-shrink-0" />
-						<address class="text-sm"
-							><a class="hover:text-primary" target="_blank" href="https://maps.app.goo.gl/aWx4LiB7YM5bnsgX6">
+						<address class="text-sm">
+							<a
+								class="hover:text-primary"
+								target="_blank"
+								href="https://maps.app.goo.gl/aWx4LiB7YM5bnsgX6"
+							>
 								Jl. Gudang Air No. 2, RT 003 RW 002, Rambutan, Kec. Ciracas, Kota Jakarta Timur,
 								Daerah Khusus Ibukota Jakarta 13830
 							</a>
@@ -77,12 +111,16 @@
 					</li>
 					<li class="mb-3 flex items-center">
 						<Phone class="mr-2 h-4 w-4 flex-shrink-0" />
-						<a href="https://wa.me/628811490430" target="_blank" class="text-sm hover:text-primary">+628811490430</a>
+						<a href="https://wa.me/628811490430" target="_blank" class="text-sm hover:text-primary"
+							>+628811490430</a
+						>
 					</li>
 					<li class="flex items-center">
 						<Instagram class="mr-2 h-4 w-4 flex-shrink-0" />
-						<a href="https://instagram.com/kangbuahsegar" target="_blank" class="text-sm hover:text-primary"
-							>@kangbuahsegar</a
+						<a
+							href="https://instagram.com/kangbuahsegar"
+							target="_blank"
+							class="text-sm hover:text-primary">@kangbuahsegar</a
 						>
 					</li>
 				</ul>
@@ -90,7 +128,7 @@
 		</section>
 		<div class="text-center text-sm text-gray-700">
 			<p>
-				&copy; {new Date().getFullYear()} Kang Buah All rights reserved.
+				&copy; {new Date().getFullYear()} Kang Buah. All rights reserved.
 			</p>
 		</div>
 	</div>
