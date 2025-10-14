@@ -15,10 +15,19 @@
 	<div class="absolute inset-0 bg-black/20"></div>
 	<div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24">
 		<div class="text-center">
-			<h1 class="mb-6 font-brand text-4xl font-light text-white sm:text-5xl lg:text-6xl">
+			<h1
+				class="mb-6 font-brand text-4xl font-light text-white sm:text-5xl lg:text-6xl"
+				data-aos="zoom-in-down"
+				data-aos-duration="1200"
+			>
 				Kontak Kami
 			</h1>
-			<p class="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl">
+			<p
+				class="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-delay="300"
+			>
 				Hubungi kami untuk informasi produk, pemesanan, atau pertanyaan lainnya
 			</p>
 		</div>
@@ -26,18 +35,15 @@
 
 	<!-- Background Banner Image -->
 	<div class="absolute inset-0 -z-10">
-        <picture>
-            <source
-                srcset="/assets/images/decor/contact/Apple-Slices-Banner.webp"
-                type="image/webp"
-            />
-            <img
-                src="/assets/images/decor/contact/Apple-Slices-Banner.jpg"
-                alt="Apple Slices Banner"
+		<picture>
+			<source srcset="/assets/images/decor/contact/Apple-Slices-Banner.webp" type="image/webp" />
+			<img
+				src="/assets/images/decor/contact/Apple-Slices-Banner.jpg"
+				alt="Apple Slices Banner"
 				class="h-full w-full object-cover brightness-[40%]"
-                loading="eager"
-            />
-        </picture>
+				loading="eager"
+			/>
+		</picture>
 	</div>
 </section>
 
@@ -45,13 +51,19 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-8">
 		<div class="mx-auto max-w-2xl p-8">
 			<div class="text-center">
-				<h2 class="mb-[1em] font-brand text-3xl font-light sm:text-4xl">
+				<h2
+					class="mb-[1em] font-brand text-3xl font-light sm:text-4xl"
+					data-aos="fade-down"
+					data-aos-duration="1000"
+				>
 					<span class="text-primary">Informasi</span> Kontak
 				</h2>
 				<div class="space-y-8">
 					<!-- Address -->
-					<div class="flex items-start">
-						<div class="mr-4 flex min-w-12 aspect-square items-center justify-center rounded-full bg-primary/10">
+					<div class="flex items-start" data-aos="fade-right" data-aos-duration="1000">
+						<div
+							class="mr-4 flex aspect-square min-w-12 items-center justify-center rounded-full bg-primary/10"
+						>
 							<MapPin class="h-6 w-6 text-primary" />
 						</div>
 						<div class="text-left">
@@ -70,23 +82,38 @@
 					</div>
 
 					<!-- Phone -->
-					<div class="flex items-start">
+					<div
+						class="flex items-start"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-delay="150"
+					>
 						<div
-							class="mr-4 flex min-w-12 aspect-square items-center justify-center rounded-full bg-secondary/10"
+							class="mr-4 flex aspect-square min-w-12 items-center justify-center rounded-full bg-secondary/10"
 						>
 							<Phone class="h-6 w-6 text-secondary" />
 						</div>
 						<div class="text-left">
 							<h3 class="mb-2 text-lg font-semibold">Telepon (WhatsApp)</h3>
-							<a href="https://wa.me/628811490430" class="text-slate-600 hover:text-primary hover:underline">
+							<a
+								href="https://wa.me/628811490430"
+								class="text-slate-600 hover:text-primary hover:underline"
+							>
 								+62 881 1490 430
 							</a>
 						</div>
 					</div>
 
 					<!-- Instagram -->
-					<div class="flex items-start">
-						<div class="mr-4 flex min-w-12 aspect-square items-center justify-center rounded-full bg-primary/10">
+					<div
+						class="flex items-start"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-delay="300"
+					>
+						<div
+							class="mr-4 flex aspect-square min-w-12 items-center justify-center rounded-full bg-primary/10"
+						>
 							<Instagram class="h-6 w-6 text-primary" />
 						</div>
 						<div class="text-left">
@@ -102,9 +129,14 @@
 					</div>
 
 					<!-- Business Hours -->
-					<div class="flex items-start">
+					<div
+						class="flex items-start"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-delay="450"
+					>
 						<div
-							class="mr-4 flex min-w-12 aspect-square items-center justify-center rounded-full bg-secondary/10"
+							class="mr-4 flex aspect-square min-w-12 items-center justify-center rounded-full bg-secondary/10"
 						>
 							<Clock class="h-6 w-6 text-secondary" />
 						</div>

@@ -50,19 +50,31 @@
 <section id="produk" class="bg-white py-12 sm:py-16">
 	<div class="mx-auto max-w-7xl px-4 sm:px-8">
 		<header class="mb-8 text-center">
-			<h2 class="mb-[0.75em] font-brand text-3xl font-light sm:text-4xl">
+			<h2
+				class="mb-[0.75em] font-brand text-3xl font-light sm:text-4xl"
+				data-aos="fade-down"
+				data-aos-duration="1000"
+			>
 				<span class="text-primary">Produk</span> Segar Kami
 			</h2>
-			<p class="mx-auto max-w-lg text-center text-slate-600">
+			<p
+				class="mx-auto max-w-lg text-center text-slate-600"
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-delay="200"
+			>
 				Pilihan buah berkualitas untuk setiap kebutuhan harian, sajian cepat, hingga hadiah untuk
 				orang tersayang ❤️
 			</p>
 		</header>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 sm:gap-6 lg:grid-cols-4">
-			{#each products as p}
+		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+			{#each products as p, i}
 				<article
 					class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+					data-aos="zoom-in-up"
+					data-aos-duration="800"
+					data-aos-delay={i * 100}
 				>
 					<div class="relative">
 						<picture>

@@ -27,13 +27,20 @@
 
 <section class="bg-white py-12 sm:py-16">
 	<div class="mx-auto max-w-7xl px-4 sm:px-8">
-		<h2 class="mb-8 text-center font-brand text-3xl font-light sm:text-4xl">
+		<h2
+			class="mb-8 text-center font-brand text-3xl font-light sm:text-4xl"
+			data-aos="fade-down"
+			data-aos-duration="1000"
+		>
 			<span class="text-primary">Mengapa</span> Memilih Kami
 		</h2>
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-			{#each features as f}
+			{#each features as f, i}
 				<div
 					class="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+					data-aos="flip-left"
+					data-aos-duration="1000"
+					data-aos-delay={i * 150}
 				>
 					<div
 						class="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary transition group-hover:bg-primary group-hover:text-white"
