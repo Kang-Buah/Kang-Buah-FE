@@ -24,15 +24,22 @@
 
 <section class="bg-white py-12 sm:py-16">
 	<div class="mx-auto max-w-7xl px-4 sm:px-8">
-		<h2 class="mb-8 text-center font-brand text-3xl font-light sm:text-4xl">
+		<h2
+			class="mb-8 text-center font-brand text-3xl font-light sm:text-4xl"
+			data-aos="zoom-in"
+			data-aos-duration="1000"
+		>
 			<span class="text-primary">Variasi</span> Produk
 		</h2>
 
 		<!-- Simple responsive grid with hover description -->
 		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			{#each items as item}
+			{#each items as item, i}
 				<article
 					class="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay={i * 200}
 				>
 					<picture>
 						<source srcset={toWebp(item.img)} type="image/webp" />
@@ -45,7 +52,7 @@
 					</picture>
 					<!-- Always-visible title band -->
 					<div
-						class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent p-4 text-white group-hover:opacity-0 transition-opacity duration-300"
+						class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 to-transparent p-4 text-white transition-opacity duration-300 group-hover:opacity-0"
 					>
 						<h3 class="text-lg font-semibold">{item.name}</h3>
 					</div>

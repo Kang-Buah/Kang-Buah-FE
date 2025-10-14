@@ -91,25 +91,52 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-8">
 		<div
 			class="relative grid grid-cols-1 items-center gap-8 rounded-2xl border border-slate-200 bg-gradient-to-br from-primary/5 to-secondary/5 p-6 sm:grid-cols-2 sm:p-10"
+			data-aos="zoom-in-up"
+			data-aos-duration="1200"
 		>
-			<div>
+			<div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
 				<p
 					class="mb-2 inline-flex items-center rounded-full bg-black/80 px-3 py-1 text-xs font-semibold tracking-wide text-white"
+					data-aos="fade-in"
+					data-aos-duration="800"
+					data-aos-delay="400"
 				>
 					<span class="mr-2 inline-block h-2 w-2 animate-pulse rounded-full bg-secondary"></span>
 					{chosenType.label}
 				</p>
-				<h2 class="mb-3 font-brand text-3xl font-light sm:text-4xl">
+				<h2
+					class="mb-3 font-brand text-3xl font-light sm:text-4xl"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="500"
+				>
 					<span class="text-primary">{title}</span>
 				</h2>
-				<p class="mb-5 max-w-prose text-slate-700">{chosenType.blurb}</p>
+				<p
+					class="mb-5 max-w-prose text-slate-700"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="600"
+				>
+					{chosenType.blurb}
+				</p>
 
-				<div class="mb-6 inline-flex items-center gap-2 rounded-xl bg-black/5 px-4 py-3">
+				<div
+					class="mb-6 inline-flex items-center gap-2 rounded-xl bg-black/5 px-4 py-3"
+					data-aos="zoom-in"
+					data-aos-duration="800"
+					data-aos-delay="700"
+				>
 					<span class="text-sm font-medium text-slate-700">Berakhir dalam</span>
 					<span class="font-mono text-xl font-bold tracking-wider text-secondary">{remaining}</span>
 				</div>
 
-				<div class="flex flex-wrap gap-3">
+				<div
+					class="flex flex-wrap gap-3"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="800"
+				>
 					{#if chosenType.key === 'voucher'}
 						<a
 							href="/#voucher"
@@ -137,7 +164,7 @@
 				</div>
 			</div>
 
-			<div class="relative">
+			<div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
 				<picture>
 					<source
 						srcset={`/assets/images/decor/deal-of-the-day/${chosenImageWebp}`}
@@ -148,13 +175,22 @@
 						alt={title}
 						class="mx-auto w-full max-w-md rounded-2xl object-cover shadow-xl"
 						loading="lazy"
+						data-aos="zoom-in"
+						data-aos-duration="1000"
+						data-aos-delay="500"
 					/>
 				</picture>
 				<div
 					class="pointer-events-none absolute -bottom-6 -left-6 hidden h-24 w-24 rounded-full bg-secondary/20 blur-xl sm:block"
+					data-aos="fade-in"
+					data-aos-duration="800"
+					data-aos-delay="900"
 				></div>
 				<div
 					class="pointer-events-none absolute -top-6 -right-6 hidden h-24 w-24 rounded-full bg-primary/20 blur-xl sm:block"
+					data-aos="fade-in"
+					data-aos-duration="800"
+					data-aos-delay="1100"
 				></div>
 			</div>
 		</div>
