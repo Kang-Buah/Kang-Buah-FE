@@ -32,6 +32,7 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.541.0",
+		"aos": "^2.3.4",
 		"svelte-bootstrap-icons": "^3.3.0"
 	}
 }

@@ -23,7 +23,7 @@
 
 <footer class="py-12">
 	<div class="container mx-auto px-4">
-		<div class="mb-8 flex justify-center">
+		<div class="mb-8 flex justify-center" data-aos="zoom-in" data-aos-duration="500">
 			<div>
 				<a
 					href="#top"
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<section class="mb-8 flex flex-wrap gap-8">
-			<div class="w-full grow">
+			<div class="w-full grow" data-aos="fade-up" data-aos-duration="600">
 				<h2 class="mb-4 font-brand text-3xl font-light">
 					<span class="text-primary">KANG</span>
 					<span class="text-secondary">BUAH</span>
@@ -61,7 +61,7 @@
 					{/each}
 				</ul>
 			</div>
-			<div class="grow">
+			<div class="grow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
 				<h2 class="mb-4 text-xl font-bold">Menu</h2>
 				<ul>
 					<li><a href="/" class="inline-block py-2 hover:text-primary">Toko</a></li>
@@ -70,7 +70,7 @@
 					<li><a href="/" class="inline-block py-2 hover:text-primary">Hubungi Kami</a></li>
 				</ul>
 			</div>
-			<div class="grow">
+			<div class="grow" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
 				<h2 class="mb-4 text-xl font-bold">Bantuan</h2>
 				<div class="flex">
 					<ul class="mr-8">
@@ -93,7 +93,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="max-w-xs">
+			<div class="max-w-xs" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
 				<h2 class="mb-4 text-xl font-bold">Punya Pertanyaan?</h2>
 				<ul>
 					<li class="mb-3 flex items-start">
@@ -126,7 +126,7 @@
 				</ul>
 			</div>
 		</section>
-		<div class="text-center text-sm text-gray-700">
+		<div class="text-center text-sm text-gray-700" data-aos="fade-up" data-aos-duration="500">
 			<p>
 				&copy; {new Date().getFullYear()} Kang Buah. All rights reserved.
 			</p>
