@@ -53,7 +53,7 @@
 					alt="Keranjang buah segar"
 					class="mx-auto w-full max-w-md drop-shadow-md"
 					loading="eager"
-					data-aos="zoom-in"
+					data-aos="fade-down"
 					data-aos-duration="1000"
 					data-aos-delay="300"
 				/>
