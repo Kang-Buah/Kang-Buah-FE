@@ -222,7 +222,7 @@
 			</button>
 			<button
 				onclick={() => goto('/kontak')}
-				class="w-full rounded-md border border-primary px-6 py-3 font-medium text-primary hover:bg-primary hover:text-white sm:w-fit"
+				class="w-full rounded-md border border-slate-300 px-6 py-3 font-medium text-slate-800 hover:border-primary hover:text-primary sm:w-fit"
 			>
 				Hubungi Kami
 			</button>
