@@ -6,6 +6,14 @@
 	import DealOfTheDay from './components/DealOfTheDay.svelte';
 </script>
 
+<svelte:head>
+	<title>Kang Buah</title>
+	<meta
+		name="description"
+		content="Teman sehat yang menghadirkan buah segar dan bumbu pilihan langsung ke meja kerja atau rumah Anda."
+	/>
+</svelte:head>
+
 <Hero />
 <WhyChooseUs />
 <ProductVariations />
